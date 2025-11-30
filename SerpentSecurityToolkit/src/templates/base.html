@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Serpent Security Toolkit{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Serpent Security Toolkit</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard.index') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('reconnaissance.index') }}">Reconnaissance</a></li>
+                <li><a href="{{ url_for('network_scanner.index') }}">Network Scanner</a></li>
+                <li><a href="{{ url_for('log_analysis.index') }}">Log Analysis</a></li>
+                <li><a href="{{ url_for('messenger.index') }}">LAN Messenger</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2023 Serpent Security Toolkit. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
