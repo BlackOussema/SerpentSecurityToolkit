@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Reconnaissance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>System Reconnaissance Results</h1>
+    <div id="reconnaissance-results">
+        <h2>CPU Information</h2>
+        <p>{{ cpu_info }}</p>
+
+        <h2>RAM Information</h2>
+        <p>{{ ram_info }}</p>
+
+        <h2>Operating System Version</h2>
+        <p>{{ os_version }}</p>
+
+        <h2>Disk Usage</h2>
+        <p>{{ disk_usage }}</p>
+
+        <h2>Network Interfaces</h2>
+        <ul>
+            {% for interface in network_interfaces %}
+                <li>{{ interface }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>MAC Addresses</h2>
+        <ul>
+            {% for mac in mac_addresses %}
+                <li>{{ mac }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Running Processes</h2>
+        <ul>
+            {% for process in running_processes %}
+                <li>{{ process }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
+</body>
+</html>
