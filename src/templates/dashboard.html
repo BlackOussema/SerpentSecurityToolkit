@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpent Security Toolkit - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Serpent Security Toolkit</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard.reconnaissance') }}">Reconnaissance</a></li>
+                <li><a href="{{ url_for('dashboard.network_scanner') }}">Network Scanner</a></li>
+                <li><a href="{{ url_for('dashboard.log_analysis') }}">Log Analysis</a></li>
+                <li><a href="{{ url_for('dashboard.messenger') }}">Secure LAN Messenger</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Dashboard Overview</h2>
+            <p>This dashboard provides access to various cybersecurity tools designed for legal internal auditing.</p>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>System Reconnaissance</li>
+                <li>Network Scanning</li>
+                <li>Log Analysis</li>
+                <li>Secure LAN Messaging</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Serpent Security Toolkit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
