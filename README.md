@@ -1,188 +1,179 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
-  <img src="https://img.shields.io/badge/Flask-2.0+-green.svg" alt="Flask">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
-  <img src="https://img.shields.io/badge/Type-Security%20Dashboard-red.svg" alt="Type">
-</p>
+# 🐍 Serpent Security Toolkit
 
-<h1 align="center">🐍 Serpent Security Toolkit</h1>
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Type](https://img.shields.io/badge/Type-Security%20Dashboard-red.svg)
 
-<p align="center">
-  <strong>Comprehensive Security Auditing Dashboard</strong>
-</p>
+## Overview
 
-<p align="center">
-  A lightweight, open-source security auditing dashboard for internal network<br>
-  and system analysis. Features system reconnaissance, network discovery,<br>
-  log analysis, and encrypted LAN messaging.
-</p>
+Serpent Security Toolkit is a lightweight, open-source security auditing dashboard designed for comprehensive internal network and system analysis. It integrates essential cybersecurity functionalities, including system reconnaissance, network discovery, log analysis, and encrypted LAN messaging, all tailored for legal compliance audits and internal security assessments.
 
----
+This toolkit provides a centralized platform for security professionals to gain insights into their infrastructure, identify potential vulnerabilities, and maintain a secure operational environment.
 
-## ✨ Features
+## Features
 
 ### 🔍 System Reconnaissance
-- Hardware information gathering
-- Operating system details
-- Running processes analysis
-- User account enumeration
-- Installed software detection
+*   **Hardware Information**: Gather detailed hardware specifications.
+*   **Operating System Details**: Retrieve OS version, kernel info, and other relevant data.
+*   **Running Processes**: Analyze active processes and their resource consumption.
+*   **User Account Enumeration**: List and inspect user accounts.
+*   **Installed Software**: Detect and list installed applications.
 
 ### 🌐 Network Scanner
-- Active host discovery
-- Port scanning
-- Service identification
-- Network topology mapping
-- ARP table analysis
+*   **Active Host Discovery**: Identify active hosts within a specified network range.
+*   **Port Scanning**: Discover open ports and services running on target hosts.
+*   **Service Identification**: Determine the types and versions of services.
+*   **Network Topology Mapping**: Visualize network structure.
+*   **ARP Table Analysis**: Inspect ARP cache for anomalies.
 
 ### 📊 Log Analyzer
-- System log parsing
-- Security event detection
-- Pattern recognition
-- Anomaly highlighting
-- Export capabilities
+*   **System Log Parsing**: Process various system logs (e.g., syslog, auth.log).
+*   **Security Event Detection**: Identify suspicious activities and security-related events.
+*   **Pattern Recognition**: Detect recurring patterns that might indicate threats.
+*   **Anomaly Highlighting**: Flag unusual entries for further investigation.
+*   **Export Capabilities**: Export analyzed logs for external reporting.
 
-### 💬 LAN Messenger
-- Encrypted local messaging
-- Secure team communication
-- No external dependencies
-- Real-time delivery
+### 💬 Encrypted LAN Messenger
+*   **Secure Local Messaging**: Facilitate encrypted communication within the local network.
+*   **Team Communication**: Enable secure collaboration among security teams.
+*   **No External Dependencies**: Operates independently without relying on external servers.
+*   **Real-time Delivery**: Ensure prompt message exchange.
 
 ### 🖥️ Web Dashboard
-- Modern, responsive UI
-- Real-time updates
-- Interactive visualizations
-- Easy navigation
+*   **Modern, Responsive UI**: User-friendly interface accessible from various devices.
+*   **Real-time Updates**: Display live data and alerts.
+*   **Interactive Visualizations**: Present complex data in an easy-to-understand graphical format.
+*   **Easy Navigation**: Intuitive layout for quick access to different modules.
 
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
-- Python 3.8+
-- pip package manager
-- Linux operating system (recommended)
+*   Python 3.8+
+*   `pip` package manager
+*   Linux operating system (recommended for full functionality)
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/BlackOussema/SerpentSecurityToolkit.git
-cd SerpentSecurityToolkit
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/BlackOussema/SerpentSecurityToolkit.git
+    cd SerpentSecurityToolkit
+    ```
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-# venv\Scripts\activate   # Windows
+2.  **Create a virtual environment (recommended)**:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Linux/macOS
+    # venv\Scripts\activate   # On Windows
+    ```
 
-# Install dependencies
-pip install -r requirements.txt
-```
+3.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ### Running the Application
 
-```bash
-# Start the Flask server
-python src/app.py
+1.  **Start the Flask server**:
+    ```bash
+    python src/app.py
+    ```
 
-# Access the dashboard
-# Open http://127.0.0.1:5000 in your browser
-```
+2.  **Access the dashboard**:
+    Open your web browser and navigate to `http://127.0.0.1:5000`.
 
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 SerpentSecurityToolkit/
 ├── src/
 │   ├── __init__.py
-│   ├── app.py                 # Flask application entry
+│   ├── app.py                 # Flask application entry point
 │   ├── config.py              # Configuration settings
 │   ├── dashboard/
 │   │   ├── __init__.py
-│   │   └── routes.py          # Dashboard routes
+│   │   └── routes.py          # Dashboard routes and views
 │   ├── modules/
 │   │   ├── __init__.py
-│   │   ├── reconnaissance.py  # System recon module
-│   │   ├── network_scanner.py # Network scanning
-│   │   ├── log_analyzer.py    # Log analysis
-│   │   └── lan_messenger.py   # Encrypted messaging
+│   │   ├── reconnaissance.py  # System reconnaissance module
+│   │   ├── network_scanner.py # Network scanning module
+│   │   ├── log_analyzer.py    # Log analysis module
+│   │   └── lan_messenger.py   # Encrypted LAN messaging module
 │   ├── utils/
 │   │   ├── __init__.py
 │   │   ├── logger.py          # Logging utilities
-│   │   └── validators.py      # Input validation
+│   │   └── validators.py      # Input validation utilities
 │   ├── templates/
-│   │   ├── base.html
-│   │   ├── dashboard.html
-│   │   ├── reconnaissance.html
-│   │   ├── network_scanner.html
-│   │   ├── log_analysis.html
-│   │   └── messenger.html
+│   │   ├── base.html          # Base HTML template
+│   │   ├── dashboard.html     # Main dashboard view
+│   │   ├── reconnaissance.html# System reconnaissance view
+│   │   ├── network_scanner.html# Network scanner view
+│   │   ├── log_analysis.html  # Log analysis view
+│   │   └── messenger.html     # LAN messenger view
 │   └── static/
 │       ├── css/
-│       │   └── style.css
+│       │   └── style.css      # CSS stylesheets
 │       └── js/
-│           └── script.js
+│           └── script.js      # JavaScript for interactivity
 ├── tests/
 │   ├── __init__.py
-│   ├── test_reconnaissance.py
-│   ├── test_network_scanner.py
-│   ├── test_log_analyzer.py
-│   └── test_lan_messenger.py
-├── requirements.txt
-├── LICENSE
-└── README.md
+│   ├── test_reconnaissance.py # Unit tests for reconnaissance
+│   ├── test_network_scanner.py# Unit tests for network scanner
+│   ├── test_log_analyzer.py   # Unit tests for log analyzer
+│   └── test_lan_messenger.py  # Unit tests for LAN messenger
+├── requirements.txt           # Python dependencies
+├── LICENSE                    # Project license file
+└── README.md                  # This README file
 ```
 
----
-
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
-Create a `.env` file based on `.env.example`:
+Create a `.env` file in the root directory based on `.env.example` (if provided, otherwise create one manually):
 
 ```bash
 # Flask Configuration
 FLASK_ENV=development
 FLASK_DEBUG=1
-SECRET_KEY=your-secret-key-here
+SECRET_KEY=your_strong_secret_key_here
 
-# Network Scanner
+# Network Scanner Settings
 SCAN_TIMEOUT=5
 MAX_THREADS=10
 
-# Logging
+# Logging Settings
 LOG_LEVEL=INFO
 LOG_FILE=serpent.log
 ```
 
 ### Config File
 
-Edit `src/config.py` for advanced settings:
+For more advanced configurations, modify `src/config.py`:
 
 ```python
 class Config:
     DEBUG = False
     TESTING = False
-    SECRET_KEY = 'your-secret-key'
+    SECRET_KEY = 'a_very_secret_key_for_production'
+    # Add other global configurations here
     
 class DevelopmentConfig(Config):
     DEBUG = True
+    # Development-specific settings
     
 class ProductionConfig(Config):
     DEBUG = False
+    # Production-specific settings
 ```
 
----
-
-## 📖 Module Documentation
+## Module Usage Examples
 
 ### System Reconnaissance
 
 ```python
-from modules.reconnaissance import SystemRecon
+from src.modules.reconnaissance import SystemRecon
 
 recon = SystemRecon()
 system_info = recon.gather_info()
@@ -192,7 +183,7 @@ print(system_info)
 ### Network Scanner
 
 ```python
-from modules.network_scanner import NetworkScanner
+from src.modules.network_scanner import NetworkScanner
 
 scanner = NetworkScanner()
 hosts = scanner.discover_hosts("192.168.1.0/24")
@@ -203,126 +194,95 @@ for host in hosts:
 ### Log Analyzer
 
 ```python
-from modules.log_analyzer import LogAnalyzer
+from src.modules.log_analyzer import LogAnalyzer
 
 analyzer = LogAnalyzer("/var/log/syslog")
 events = analyzer.find_security_events()
+for event in events:
+    print(event)
 ```
 
 ### LAN Messenger
 
 ```python
-from modules.lan_messenger import LANMessenger
+from src.modules.lan_messenger import LANMessenger
 
 messenger = LANMessenger()
-messenger.send("Hello, team!", encrypt=True)
+messenger.send("Hello, team! This is a secure message.", encrypt=True)
 ```
 
----
+## Testing
 
-## 🧪 Testing
+To run the included tests:
 
 ```bash
+# Install pytest if not already installed
+pip install pytest pytest-cov
+
 # Run all tests
 pytest tests/
 
-# Run specific test
+# Run specific test file
 pytest tests/test_reconnaissance.py
 
-# Run with coverage
+# Run tests with coverage report
 pytest --cov=src tests/
 ```
 
----
-
-## 📋 Requirements
-
-```
-Flask>=2.0.0
-python-dotenv>=0.19.0
-psutil>=5.8.0
-netifaces>=0.11.0
-cryptography>=3.4.0
-scapy>=2.4.5
-```
-
----
-
-## 🔒 Security Considerations
+## Security Considerations
 
 ### Legal Usage
-- Only use on networks you own or have authorization to audit
-- Comply with all applicable laws and regulations
-- Document all testing activities
+*   **Authorization**: Only use this toolkit on networks and systems you own or have explicit authorization to audit.
+*   **Compliance**: Ensure compliance with all applicable local, national, and international laws and regulations.
+*   **Documentation**: Document all security auditing activities thoroughly.
 
 ### Best Practices
-- Run in isolated environments when possible
-- Use strong authentication
-- Keep the toolkit updated
-- Review logs regularly
+*   **Isolated Environments**: Whenever possible, run the toolkit in isolated or sandboxed environments.
+*   **Strong Authentication**: Implement strong authentication mechanisms for accessing the dashboard.
+*   **Regular Updates**: Keep the toolkit and its dependencies updated to the latest versions.
+*   **Log Review**: Regularly review logs generated by the toolkit and the audited systems.
 
----
+## Disclaimer
 
-## 🖼️ Screenshots
+**This toolkit is provided for authorized security auditing and educational purposes only.**
 
-### Dashboard
-The main dashboard provides an overview of system health and recent activities.
+*   Unauthorized access to computer systems is illegal and unethical.
+*   The authors are not responsible for any misuse or damage caused by this toolkit.
+*   Always adhere to responsible disclosure practices when identifying vulnerabilities.
 
-### Network Scanner
-Visual representation of discovered hosts and open ports.
+## Contributing
 
-### Log Analysis
-Interactive log viewer with filtering and search capabilities.
+We welcome contributions to improve Serpent Security Toolkit! Please follow these steps:
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Write tests for new features
-4. Submit a pull request
+1.  Fork the repository.
+2.  Create a new feature branch (`git checkout -b feature/YourFeature`).
+3.  Implement your changes and write comprehensive tests.
+4.  Ensure your code adheres to the project's coding standards.
+5.  Submit a pull request with a clear description of your changes.
 
 ### Development Setup
 
 ```bash
-# Install dev dependencies
+# Install development dependencies (e.g., linters, formatters)
 pip install -r requirements-dev.txt
 
-# Run linting
+# Run linting checks
 flake8 src/
 
-# Format code
+# Format code using Black
 black src/
 ```
 
----
+## License
 
-## ⚠️ Disclaimer
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full details.
 
-**This toolkit is for authorized security auditing only.**
-
-- Only use on systems you own or have explicit permission to test
-- Unauthorized access to computer systems is illegal
-- The authors are not responsible for misuse
-- Always follow responsible disclosure practices
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Author
+## Author
 
 **Ghariani Oussema**
-- GitHub: [@BlackOussema](https://github.com/BlackOussema)
-- Role: Cyber Security Researcher & Full-Stack Developer
-- Location: Tunisia 🇹🇳
+*   GitHub: [@BlackOussema](https://github.com/BlackOussema)
+*   Role: Cybersecurity Researcher & Full-Stack Developer
+*   Location: Tunisia 🇹🇳
 
 ---
 
